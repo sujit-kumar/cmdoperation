@@ -1,0 +1,26 @@
+import java.util.*;
+
+class PyramidDemo
+{
+    static int givenNo;
+    public static void main(String ar[])
+    {
+      Scanner s=new Scanner(System.in);
+      System.out.print("enter a no ");
+      givenNo=s.nextInt();
+      for(int i=1;i<=givenNo;i++)
+      {
+          for(int j=givenNo;j>=i;j--)
+          {
+           System.out.print(" ");
+          }
+          for(int k=1;k<=i;k++)
+          {
+             System.out.print(i+" ");
+          }
+          System.out.println();
+      }
+
+
+    }
+}

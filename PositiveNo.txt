@@ -1,0 +1,31 @@
+import java.util.*;
+class PositiveNo
+
+{
+    public static void main(String ar[])
+    {
+      int no;
+      int totalCount=0;
+      int beforeCount=0;
+      Scanner s=new Scanner(System.in);
+      System.out.print("Enter the no: ");
+      while ((no=s.nextInt())!=0)
+      {
+        if(no>0)
+        {
+           totalCount++;
+
+        }
+          else
+        {
+            beforeCount=totalCount;
+        }
+
+
+      }
+        System.out.println("Positive integers appear before the -ve number: "+beforeCount);
+        System.out.print("Positive integers appear after the -ve number:  "+(totalCount-beforeCount));
+
+    }
+
+}

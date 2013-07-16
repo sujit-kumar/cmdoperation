@@ -1,0 +1,27 @@
+import java.util.*;
+public class PrimeNumbers {
+  public static void main(String args[])
+   {
+      int n,count, num ;
+
+      Scanner in = new Scanner(System.in);
+      System.out.println("Enter the number of prime numbers you want");
+      n = in.nextInt();
+
+      if (n >= 1)
+      {
+         System.out.println("First "+n+" prime numbers are :-");
+      }
+
+                  for(num=0;num<=n;num++)
+                          {
+                              for(count=2;count<=num-1;count++)
+                               {
+                                     if(num%count==0)
+                                     break;
+                               }
+                 if(num==count)
+                System.out.println("The Prime No. is="+num);
+             }
+   }
+}

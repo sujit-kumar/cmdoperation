@@ -1,0 +1,26 @@
+import java.util.*;
+class PyramidStyle1
+{
+    public static void main(String ar[]) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter a no:-");
+        int No=s.nextInt();
+        for(int i=1;i<=No;i++)
+        {
+            for(int j=No;j>=i;j--)
+            {
+                System.out.print(" ");
+            }
+            for(int k=i;k>=1;k--)
+            {
+                System.out.print(k);
+            }
+            for(int m=2;m<=i;m++)
+            {
+            System.out.print(m);
+            }
+            System.out.println();
+        }
+
+    }
+}

@@ -1,0 +1,48 @@
+import java.util.*;
+/**
+ * Created with IntelliJ IDEA.
+ * User: sujit
+ * Date: 7/13/13
+ * Time: 7:09 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class PyramidStyle {
+    public static void main(String ar[]){
+      Scanner s=new Scanner(System.in);
+      int No=s.nextInt();
+      for(int i=1;i<=No;i++)
+      {
+          for(int j=No;j>=i;j--)
+          {
+              System.out.print(" ");
+          }
+          if(i==1 || i==No)
+          {
+              for(int j=1;j<=i*2-1;j++)
+              {
+                  System.out.print(No);
+              }
+              System.out.println();
+          }
+
+          else
+          {
+             for(int k=1;k<=i*2-1;k++)
+             {
+                 if(k==1 || k==i*2-1)
+                 {
+                     System.out.print(No);
+                 }
+                 else
+                 {
+                     System.out.print(0);
+                 }
+
+             }
+              System.out.println();
+          }
+      }
+
+
+    }
+}

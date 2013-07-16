@@ -1,0 +1,32 @@
+import java.util.*;
+public class Triangle {
+    public static void main(String args[])
+    {
+      int a,b,c,tri,fri ;
+      Scanner first = new Scanner(System.in);
+      System.out.println("Enter the value for A,B and C as you want");
+      a = first.nextInt();
+      b = first.nextInt();
+      c = first.nextInt();
+      tri =a*a;
+      fri= b*b + c*c;
+      System.out.println(fri);
+      if(tri<fri)
+        {
+            System.out.println("Acute Triangle"+fri);
+        }
+      else if(tri>fri){
+            System.out.println("Obtuse Triangle"+fri);
+        }
+      else {
+            System.out.println("Right Triangle"+fri);
+      }
+      if(a==b && b==c ){
+          System.out.println("Equilatoral triangle");
+      }
+      else if(a==b || b==c){
+          System.out.println("Isolated Triangle");
+      }
+
+    }
+}
