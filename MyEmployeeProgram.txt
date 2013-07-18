@@ -1,0 +1,53 @@
+ public class MyEmployeeProgram
+       {
+
+        public static void main(String[] args)
+
+        {
+            Employee1 obj1[] = new Employee1[3];
+            System.out.println("Enter age and name of the Employees");
+            obj1[0]=new Employee1(2,"c");
+            obj1[1]=new Employee1(33,"def");
+            obj1[2]=new Employee1(4,"hjk");
+
+            Employee1 emp = getLowest(obj1);
+            emp.display();
+
+        }
+
+        static Employee1 getLowest(Employee1[] employees)
+        {
+            int y=0;
+            int leastage =employees [0].age;
+            for(int count = 1;count<employees.length;count++)
+            {
+                if(employees[count].age < leastage)
+                {
+                    leastage =employees[count].age ;
+                    y=count;
+                }
+
+            }
+            return employees[y];
+        }
+}
+
+
+     class Employee1
+    {
+        int age;
+        String name;
+        Employee1(int age,String name)
+        {
+            this.age = age;
+            this.name = name;
+        }
+        void display()
+        {
+            System.out.println("Name :"+name+"Age:"+age);
+        }
+    }
+
+
+	
+	write a program to create a employee array and it hold employee age and employee name .our job to short it  according to age .

@@ -1,0 +1,76 @@
+ class ConvertZero {
+        static int[][] ConvertToZero(int[][] myArray){
+        int arrayLenth = myArray.length;
+        int arrayRowLenth = myArray[1].length;
+        boolean a1[]=new boolean[arrayLenth];
+        boolean a2[]=new boolean[arrayRowLenth];
+      for(int i = 0; i < arrayLenth;i++)
+       {
+      for(int j = 0;j < arrayRowLenth;j++)
+         {
+            if(myArray[i][j] == 0)
+            {
+                a1[i]=true;
+                a2[j]=true;
+            }
+
+            System.out.print(myArray[i][j]+"  ");
+        }
+        System.out.println("\n");
+    }
+    System.out.println("\n");
+        for(int i = 0; i < arrayLenth;i++)
+        {
+            for(int j = 0;j < arrayRowLenth;j++)
+            {
+                if(a1[i]||a2[j])
+                {
+                    myArray[i][j] = 0;
+                }
+
+            }
+
+        }
+
+          return myArray;
+}
+}
+
+    public class ArrayProgram
+    {
+        public  static void main(String ar[])
+        {
+
+          int arr[][]={{1,2,3},{2,3,0},{1,0,6,},{5,0,6}};
+            int at[][]=ConvertZero.ConvertToZero(arr);
+              int r=at.length;
+              int c=at[1].length;
+            for (int i=0;i<r;i++)
+            {
+                for (int j=0;j<c;j++)
+                {
+                    System.out.print(at[i][j]+"  ");
+                }
+                System.out.println();
+            }
+
+        }
+
+     }
+
+
+Write a java program which takes a 2-D integer array as input and converts all the elements of that column and row to zero where  it finds a zero and print the output.
+
+input:-
+--------------
+1  2  3  
+2  3  0  
+1  0  6  
+5  0  6  
+
+output:-
+-----------
+1  0  0  
+0  0  0  
+0  0  0  
+0  0  0  
