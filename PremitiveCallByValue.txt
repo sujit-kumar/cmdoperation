@@ -1,0 +1,17 @@
+class PremitiveCallByValue
+{
+    public static void main(String ar[]){
+        int no=8;
+        PremitiveCallByValue premitiveCallByValue=new PremitiveCallByValue();
+        System.out.println("Before Calling the method:- "+ no);
+        premitiveCallByValue.changeValue(no);
+        System.out.println("After Calling the method:- "  + no);
+    }
+     public void changeValue(int no ){
+         no++;
+         System.out.println("inside the changevalue methd "+no);
+
+     }
+
+
+}

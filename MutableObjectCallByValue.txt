@@ -1,0 +1,34 @@
+class MutableObjectCallByValue
+{
+    int size;
+    String name;
+    MutableObjectCallByValue(int size,String name) {
+        this.size=size;
+        this.name=name;
+     }
+     public void setSize(int size){
+         this.size=size;
+     }
+     public int getSize(){
+         return size;
+     }
+    public void setName(String name){
+        this.name=name;
+    }
+    public String getName(){
+        return name;
+    }
+    public static void main(String ar[]){
+      MutableObjectCallByValue mutableObjectCallByValue=new MutableObjectCallByValue(24,"sujit");
+      System.out.println("before calling the method "+mutableObjectCallByValue.getSize()+" "+mutableObjectCallByValue.getName());
+      mutableObjectCallByValue.changeValue(mutableObjectCallByValue);
+      System.out.println("after calling the method "+mutableObjectCallByValue.getSize()+" "+mutableObjectCallByValue.getName());
+
+    }
+     public void changeValue(MutableObjectCallByValue mutableObjectCallByValue){
+        mutableObjectCallByValue.setSize(42);
+        mutableObjectCallByValue.setName("susmit");
+
+     }
+}
+
