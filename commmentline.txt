@@ -1,0 +1,63 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: sujit
+ * Date: 7/19/13
+ * Time: 10:36 AM
+ * To change this template use File | Settings | File Templates.
+ */
+public class ReadOnlyLine {
+
+    public String eachline;
+    public static int totalLine = 0;
+
+          public ReadOnlyLine(String eachline ){
+                this.eachline = eachline;
+           }
+
+
+
+    public static void main(String ar[])
+    {
+
+        try
+        {
+            BufferedReader br= new BufferedReader(new FileReader("d:\\PyramidDemo.txt"));
+            String sReadLine=null;
+            int blankLine = 0;
+
+            while((sReadLine=br.readLine())!=null)
+            {
+
+                sReadLine= sReadLine.trim();
+                if(sReadLine.isEmpty()) {
+                  ++totalLine;
+                  ++blankLine;
+
+                }
+                else {
+                 ++totalLine;
+                ReadOnlyLine readOnlyLinee = new ReadOnlyLine(sReadLine);
+                OnlyReadLineJavaCoad onlyReadLineJavaCoad = new OnlyReadLineJavaCoad();
+                onlyReadLineJavaCoad.readOnlyNonCommentLine(readOnlyLinee);
+
+                }
+
+            }
+            int myResult = totalLine-(blankLine+OnlyReadLineJavaCoad.countNoOfCommntCode);
+            System.out.print(myResult);
+
+            br.close();
+        }
+        catch (Exception e)
+        {
+            System.out.print(e);
+        }
+
+
+    }
+}

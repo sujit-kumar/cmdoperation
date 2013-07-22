@@ -1,0 +1,42 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: sujit
+ * Date: 7/20/13
+ * Time: 10:34 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class OnlyReadLineJavaCoad {
+    public static final String EXTRACT_FIRST_COMMENT_LINE  = "^[/][*]";
+    public static final String EXTRACT_SECOND_COMMENT_LINE  = "[*][/]";
+    public static final String EXTRACT_SECOND_COMMENT_LINE_PART  = "^[//]";
+    public static boolean whenFindComment = false;
+    public static int countNoOfCommntCode = 0;
+    public void readOnlyNonCommentLine(ReadOnlyLine readOnlyLine){
+
+        Pattern extractFirstCommentLinePattern = Pattern.compile(EXTRACT_FIRST_COMMENT_LINE);
+        Matcher extractFirstCommentLineMatcher = extractFirstCommentLinePattern.matcher(readOnlyLine.eachline.trim());
+        Pattern extractSecondCommentLinePattern = Pattern.compile(EXTRACT_SECOND_COMMENT_LINE);
+        Matcher extractSecondCommentLineMatcher = extractSecondCommentLinePattern.matcher(readOnlyLine.eachline.trim());
+        Pattern extractSecondCommentLinePartPattern = Pattern.compile(EXTRACT_SECOND_COMMENT_LINE_PART);
+        Matcher extractSecondCommentLinePartMatcher = extractSecondCommentLinePartPattern.matcher(readOnlyLine.eachline.trim());
+        if(extractFirstCommentLineMatcher.find() ){
+            ++countNoOfCommntCode;
+            whenFindComment = true;
+        }
+        else if(extractSecondCommentLineMatcher.find()|| whenFindComment==true) {
+         ++countNoOfCommntCode;
+         whenFindComment = false;
+
+    }
+
+
+        else if(extractSecondCommentLinePartMatcher.find()){
+            ++countNoOfCommntCode;
+        }
+      // System.out.println(countNoOfCommntCode);
+
+}
+}
