@@ -1,0 +1,28 @@
+import java.io.*;
+
+class ReadaFileFromDirecoryAndWriteIntoAnotherDirectory{
+    public static void main(String ar[]) throws IOException {
+        File folder = new File("d:\\myfolder");
+       FileReader fileReader1 = null;
+        BufferedReader bufferedReader = null;
+        FileWriter fileWriter = null;
+        File[] files = folder.listFiles();
+        for (File f:files){
+            if(f.getName().endsWith(".java")){
+                fileReader1 = new FileReader(f);
+                bufferedReader = new BufferedReader(fileReader1);
+                fileWriter = new FileWriter("d:\\myfolder1\\sujit.txt");
+                PrintWriter printWriter = new PrintWriter(fileWriter);
+                String readLine;
+                while ((readLine = bufferedReader.readLine())!=null){
+                    printWriter.println(readLine);
+                }
+
+            }
+
+
+        }
+        fileReader1.close();
+        fileWriter.close();
+    }
+}

@@ -1,0 +1,24 @@
+/**
+ * Created with IntelliJ IDEA.
+ * User: sujit
+ * Date: 7/28/13
+ * Time: 12:39 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class MyExceptionProgram {
+    void calculate(int t){
+
+    }
+    public static void main(String ar[]){
+        MyExceptionProgram ob = new MyExceptionProgram();
+
+        int[] myArray = new int[5];
+        try {
+            ob.calculate(6);
+        }
+        catch (Exception e){
+            System.out.print(e);
+        }
+
+    }
+}

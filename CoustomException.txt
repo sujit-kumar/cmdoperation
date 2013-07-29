@@ -1,0 +1,13 @@
+/**
+ * Created with IntelliJ IDEA.
+ * User: sujit
+ * Date: 7/25/13
+ * Time: 11:02 AM
+ * To change this template use File | Settings | File Templates.
+ */
+public class CoustomException extends Throwable {
+    void CoustomException(  ){
+
+    }
+
+}

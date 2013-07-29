@@ -1,0 +1,17 @@
+/**
+ * Created with IntelliJ IDEA.
+ * User: sujit
+ * Date: 7/27/13
+ * Time: 12:24 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class TokonizeProgram {
+    public static void main (String ar[]){
+        String myString = "java is a platform Independent Language";
+        String[] splitMyString = myString.split("\\s");
+        for (int myNo=0;myNo<splitMyString.length;myNo++){
+            System.out.println(splitMyString[myNo]);
+        }
+    }
+
+}

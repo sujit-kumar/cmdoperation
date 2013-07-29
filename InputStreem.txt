@@ -1,0 +1,19 @@
+import java.io.ByteArrayInputStream;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: sujit
+ * Date: 7/26/13
+ * Time: 11:19 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class InputStreem {
+    public static void main (String ar[]){
+        byte buf[] = {65,66,67,68,69};
+        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(buf);
+        int no;
+        while ((no = byteArrayInputStream.read())!=-1){
+         System.out.println((char)no);
+        }
+    }
+}
